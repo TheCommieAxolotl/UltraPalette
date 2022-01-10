@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;400;500;600;700&display=swap");
+
+:root {
+    --text: #ecf0f1;
+    --font: "Lato";
+    --accent: #6e6af6;
+    --accent-hover: #6f6af64d;
+
+    --bg1: #101014;
+    --bg2: #17161b;
+    --bg3: #16161d;
+
+    --a1: #6e6af6;
+    --a2: #6f6af62c;
+    --a3: #6f6af64d;
+
+    --l1: #dcddde;
+    --l2: #c9ced0;
+    --l3: #b9bbbe;
+
+    --r1: #eb8181;
+    --o1: #ffce97;
+    --y1: #fdff97;
+    --g1: #97ffa5;
+    --b1: #97aaff;
+}
+
+.skip-nav {
+    position: absolute;
+    padding: 9px 15px 9px 10px;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    font-weight: bold;
+    color: var(--text);
+    transform: translateX(-120%) translateY(35.475px);
+    z-index: 9999;
+}
+
+.skip-nav:focus {
+    transform: translateX(0) translateY(35.475px);
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg1);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text);
+}
+
+* {
+    font-family: var(--font);
+}
+
+li,
+a,
+button {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--bg3);
+}
+
+footer {
+    margin-top: 3rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 10%;
+    background-color: var(--bg3);
+}
+
+.footer-text {
+    color: var(--text);
+    padding-right: 5px;
+}
+
+.footer-button {
+    margin-left: auto;
+    padding: 9px 25px;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    font-weight: bold;
+    color: var(--text);
+    position: relative;
+}
+
+.footer-link {
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.footer-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+
+    transition: transform 0.25s ease-in;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.footer-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 1000;
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: auto;
+    cursor: default;
+    position: relative;
+}
+
+.page-title::after {
+    content: " Palette";
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    margin-right: auto;
+    cursor: default;
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.2s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: var(--accent);
+}
+
+.main-title {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    font-weight: bold;
+    color: var(--text);
+    position: relative;
+}
+
+.main-title:hover {
+    background-color: var(--accent-hover);
+}
+
+#hero {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+#palette {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+#palette-2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+#palette-3 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+#palette-4 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-header {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    color: var(--accent);
+    font-size: 50pt;
+    margin: 0;
+}
+
+.hero-subtext {
+    margin: 0;
+}
+
+.palette-container-1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.palette-container-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.palette-container-3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.palette-container-4 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.palette-color-container {
+    width: 10rem;
+    height: 10rem;
+    aspect-ratio: 1 1;
+    background-color: var(--bg2);
+    margin: 0.5rem;
+    border-radius: 0.5em;
+    box-shadow: #0c0c0f 0px 3px 6px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.1s ease-in;
+    transform: translateY(0);
+}
+
+.palette-color-container:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.palette-color-container .color {
+    width: 100%;
+    height: 70%;
+}
+
+.palette-color-container .label {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    text-transform: uppercase;
+}
+
+.palette-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Colours */
+.palette-color-container .color.bg1 {
+    background-color: var(--bg1);
+}
+
+.palette-color-container .color.bg2 {
+    background-color: var(--bg2);
+}
+
+.palette-color-container .color.bg3 {
+    background-color: var(--bg3);
+}
+
+.palette-color-container .color.a1 {
+    background-color: var(--a1);
+}
+
+.palette-color-container .color.a2 {
+    background-color: var(--a3);
+}
+
+.palette-color-container .color.a3 {
+    background-color: var(--a2);
+}
+
+.palette-color-container .color.l1 {
+    background-color: var(--l1);
+}
+
+.palette-color-container .color.l2 {
+    background-color: var(--l2);
+}
+
+.palette-color-container .color.l3 {
+    background-color: var(--l3);
+}
+
+.palette-color-container .color.r1 {
+    background-color: var(--r1);
+}
+
+.palette-color-container .color.o1 {
+    background-color: var(--o1);
+}
+
+.palette-color-container .color.y1 {
+    background-color: var(--y1);
+}
+
+.palette-color-container .color.g1 {
+    background-color: var(--g1);
+}
+
+.palette-color-container .color.b1 {
+    background-color: var(--b1);
+}
