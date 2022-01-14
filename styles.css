@@ -148,6 +148,7 @@ footer {
     margin-right: auto;
     cursor: default;
     position: relative;
+    user-select: none;
 }
 
 .page-title::after {
